@@ -1,8 +1,15 @@
 import { Thermometer } from "lucide-react";
+import { ThemeToggle } from "../components/ThemeToggle";
 
 export const Home =()=>{
-    return <div>Home</div>;
+    return(
+        <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
 
-    // Theme  
-    // bg
+            <ThemeToggle/>
+
+        </div>
+
+
+
+    )
 }
