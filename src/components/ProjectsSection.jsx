@@ -1,0 +1,112 @@
+import { ExternalLink, Github, ArrowRight } from "lucide-react"
+
+const projects=[
+    {
+        id:1,
+        title:"Hangman",
+        description: "A Hangman game implemented with React, featuring interactive gameplay and dynamic state management.",
+        // 使用 Typescript 开发的“猜单词”游戏，包含交互式玩法和动态状态管理
+        image:"/projects/hangman.png",
+        tags: ["Typescript","React"],
+        demoUrl: "#",
+        githubUrl:"https://github.com/kaden175ck/HangMan",
+    },
+    {
+        id:2,
+        title: "Markdown Supported Note Taking With Categories",
+        description: "A Todo application built with React that supports categories, markdown editing, and flexible filtering.",
+        // 基于Typescript的待办应用，支持分类、Markdown 编辑和灵活的筛选功能
+        image:"/projects/notetaking.png",
+        tags: ["Typescript","React"],
+        demoUrl: "#",
+        githubUrl:"#",
+    },
+
+    {
+        id:3,
+        title:"AI Resume Analyzer",
+        description: "An AI-powered Resume Analyzer created with React, React Router, and Puter.js for automated job matching.",
+        // 利用 Typescript、React Router 和 Puter.js 构建的 AI 简历分析器，可实现智能化的岗位匹配
+        image:"/projects/resumeproject.png",
+        tags: ["Typescript","React","Tailwind CSS"],
+        demoUrl: "#",
+        githubUrl:"https://github.com/kaden175ck/Resume-Analyzer",
+    },
+]
+
+export const ProjectsSection = () => {
+  return (
+    <section id="projects" className="py-24 px-4 relative">
+      <div className="container mx-auto max-w-5xl">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
+          Featured <span className="text-primary">Projects</span>
+        </h2>
+        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+          Here are some of my recent projects. Each project was carefully crafted with attention to detail,
+          performance, and user experience.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className="group bg-card rounded-lg overflow-hidden shadow-sm card-hover flex flex-col"
+            >
+              {/* 图片区域 */}
+              <div className="h-64 overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+
+              {/* 内容区：用 flex 切成 上部(文字) + 底部(icons) */}
+              <div className="p-4 flex flex-col flex-1">
+                {/* 上半部：tags + 标题 + 描述 */}
+                <div>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-2 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <h3 className="text-lg font-semibold">{project.title}</h3>
+
+                  {/* 让描述高度更一致，可选其一：line-clamp 或 min-h line-climp要单独安装tailwind插件，我没装*/}
+                  <p className="text-muted-foreground text-sm mt-2 line-clamp-3 min-h-[60px]">
+                    {project.description}
+                  </p>
+                </div>
+
+                {/* 底部：始终贴底 */}
+                <div className="mt-auto flex justify-between items-center pt-3">
+                  <div className="flex gap-3">
+                    <a href={project.demoUrl} target="_blank" rel="noreferrer" aria-label="Live demo" className="text-foreground/80 hover:text-primary transition-colors duration-300">
+                      <ExternalLink className="h-5 w-5 opacity-80 hover:opacity-100 transition-opacity" />
+                    </a>
+                    <a href={project.githubUrl} target="_blank" rel="noreferrer" aria-label="GitHub" className="text-foreground/80 hover:text-primary transition-colors duration-300">
+                      <Github className="h-5 w-5 opacity-80 hover:opacity-100 transition-opacity" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mt-12">
+            <a className="cosmic-button w-fit flex items-center mx-auto gap-2" href="https://github.com/kaden175ck?tab=repositories" target="_blank">
+                Check My Github <ArrowRight size={16} />
+            </a>
+        </div>
+
+      </div>
+    </section>
+  );
+};
