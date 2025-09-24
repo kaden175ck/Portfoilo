@@ -27,7 +27,7 @@ npm run dev
 npm install tailwindcss @tailwindcss/vite
 
 # 图标库
-npm install lucide-react
+npm install lucide-react react-icons
 
 # 路由 & 样式工具
 npm install react-router-dom tailwind-merge
