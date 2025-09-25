@@ -24,9 +24,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Add deploy marker
-        run: echo $GITHUB_SHA > dist/__deployed_commit.txt
-
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -36,6 +33,6 @@ jobs:
           protocol: ftps
           port: 21
           local-dir: dist/
-          server-dir: ./ # 如果是附加域名，请改成它的根目录
+          server-dir: public_html/ # 如果是附加域名，请改成它的根目录
           dangerous-clean-slate: true # 与 dist 同步：服务器上被你删除的文件也会被清理
           log-level: verbose
