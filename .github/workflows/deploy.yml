@@ -24,7 +24,7 @@ jobs:
       - name: Build
         run: npm run build
 
-      # 可视化确认：给 dist 放一个标记文件，部署后在服务器能看到
+      # 可视化确认：给 dist 放一个标记文件，部署后在服务器能看到1
       - name: Add deploy marker
         run: echo $GITHUB_SHA > dist/__deployed_commit.txt
 
