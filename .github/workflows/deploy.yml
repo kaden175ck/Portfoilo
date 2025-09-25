@@ -2,8 +2,8 @@ name: Deploy to Hostinger
 
 on:
   push:
-    branches: [main]
-  workflow_dispatch: # 允许手动触发
+    branches: [main] # 如果默认分支是 master 就改成 master
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -24,6 +24,7 @@ jobs:
       - name: Build
         run: npm run build
 
+      # 可视化确认：给 dist 放一个标记文件，部署后在服务器能看到
       - name: Add deploy marker
         run: echo $GITHUB_SHA > dist/__deployed_commit.txt
 
@@ -35,7 +36,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
           port: 21
-          local-dir: dist/
-          server-dir: ./ # 如果是附加域名，请改成它的根目录
-          dangerous-clean-slate: true # 与 dist 同步：服务器上被你删除的文件也会被清理
+          local-dir: dist/ # 结尾必须有 /
+          server-dir: ./ # ✅ 新账号登录即是 4everyang.com 的 public_html
+          dangerous-clean-slate: true
           log-level: verbose
