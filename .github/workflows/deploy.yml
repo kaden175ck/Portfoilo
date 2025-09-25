@@ -24,7 +24,10 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: FTP Deploy (upload dist/* to server)
+      - name: Add deploy marker
+        run: echo $GITHUB_SHA > dist/__deployed_commit.txt
+
+      - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
