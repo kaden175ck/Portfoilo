@@ -1,6 +1,8 @@
 # Portfoilo
 
-## 使用 **Vite + React** 搭建的个人主页，集成 **Tailwind CSS**、**React Router** 等常用工具库，支持 **响应式布局 (Responsive Design)**，在桌面端和移动端都有良好体验。
+[![Live Demo](https://img.shields.io/badge/Website-Online-green?style=flat&logo=vercel)](https://4everyang.com)
+
+## 使用 **Vite + React** 搭建的个人主页，集成 **Tailwind CSS**、**React Router** 等常用工具库，支持 **Responsive Design**，在桌面端和移动端都有良好体验。
 
 ## 🚀 初始化过程
 
@@ -22,6 +24,12 @@ npm install
 
 # 启动开发服务器
 npm run dev
+
+# 构建dist打包
+npm run build
+
+# 预览
+npm run preview
 
 # Tailwind CSS
 npm install tailwindcss @tailwindcss/vite
