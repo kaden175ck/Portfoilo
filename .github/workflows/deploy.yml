@@ -30,6 +30,6 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: dist
+          local-dir: dist/
           server-dir: public_html/ # 如果是附加域名，请改成它的根目录
           dangerous-clean-slate: true # 与 dist 同步：服务器上被你删除的文件也会被清理
