@@ -7,8 +7,8 @@ const projects=[
         description: "A Hangman game implemented with React, featuring interactive gameplay and dynamic state management.",
         // 使用 Typescript 开发的“猜单词”游戏，包含交互式玩法和动态状态管理
         image:"/projects/hangman.png",
-        tags: ["Typescript","React"],
-        demoUrl: "#",
+        tags: ["Typescript"],
+        demoUrl: "https://kaden175ck.github.io/HangMan/",
         githubUrl:"https://github.com/kaden175ck/HangMan",
     },
     {
@@ -17,9 +17,9 @@ const projects=[
         description: "A Todo application built with React that supports categories, markdown editing, and flexible filtering.",
         // 基于Typescript的待办应用，支持分类、Markdown 编辑和灵活的筛选功能
         image:"/projects/notetaking.png",
-        tags: ["Typescript","React"],
-        demoUrl: "#",
-        githubUrl:"#",
+        tags: ["Typescript","Bootstrap","React Router V7"],
+        demoUrl: "https://kaden175ck.github.io/Noted/",
+        githubUrl:"https://github.com/kaden175ck/Noted",
     },
 
     {
@@ -28,9 +28,20 @@ const projects=[
         description: "An AI-powered Resume Analyzer created with React, React Router, and Puter.js for automated job matching.",
         // 利用 Typescript、React Router 和 Puter.js 构建的 AI 简历分析器，可实现智能化的岗位匹配
         image:"/projects/resumeproject.png",
-        tags: ["Typescript","React","Tailwind CSS"],
+        tags: ["Typescript","Tailwind CSS","React Router V7","Puter.js"],
         demoUrl: "#",
         githubUrl:"https://github.com/kaden175ck/Resume-Analyzer",
+    },
+
+
+    {
+        id:4,
+        title:"Countries Explorer",
+        description: "A cool, interactive web application that lets you explore country data.",
+        image:"/projects/country.png",
+        tags: ["Typescript","React Router V7","Tailwind CSS"],
+        demoUrl: "https://kaden175ck.github.io/Countries-Explorer/",
+        githubUrl:"https://github.com/kaden175ck/Countries-Explorer",
     },
 ]
 
