@@ -4,8 +4,7 @@ const projects=[
     {
         id:1,
         title:"Hangman",
-        description: "A Hangman game implemented with React, featuring interactive gameplay and dynamic state management.",
-        // 使用 Typescript 开发的“猜单词”游戏，包含交互式玩法和动态状态管理
+        description: "A Hangman game (a word guessing game)",
         image:"/projects/hangman.png",
         tags: ["Typescript"],
         demoUrl: "https://kaden175ck.github.io/HangMan/",
@@ -13,9 +12,8 @@ const projects=[
     },
     {
         id:2,
-        title: "Markdown Supported Note Taking With Categories",
-        description: "A Todo application built with React that supports categories, markdown editing, and flexible filtering.",
-        // 基于Typescript的待办应用，支持分类、Markdown 编辑和灵活的筛选功能
+        title: "Markdown Supported Note Taking Tool",
+        description: "A web-based note-taking app with category management, markdown editing, and flexible filtering.",
         image:"/projects/notetaking.png",
         tags: ["Typescript","Bootstrap","React Router V7"],
         demoUrl: "https://kaden175ck.github.io/Noted/",
@@ -24,12 +22,11 @@ const projects=[
 
     {
         id:3,
-        title:"AI Resume Analyzer",
-        description: "An AI-powered Resume Analyzer created with React, React Router, and Puter.js for automated job matching.",
-        // 利用 Typescript、React Router 和 Puter.js 构建的 AI 简历分析器，可实现智能化的岗位匹配
+        title:"Resume Analyzer",
+        description: "Serverless AI-powered Resume Analyzer for automated job matching. Think of it as your personal job searching assistant.",
         image:"/projects/resumeproject.png",
-        tags: ["Typescript","Tailwind CSS","React Router V7","Puter.js"],
-        demoUrl: "#",
+        tags: ["Typescript","Tailwind CSS","React Router V7","Puter.js","Zustand"],
+        demoUrl: "https://kaden175ck.github.io/Resume-Analyzer/",
         githubUrl:"https://github.com/kaden175ck/Resume-Analyzer",
     },
 
