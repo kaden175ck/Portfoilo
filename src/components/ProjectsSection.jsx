@@ -40,6 +40,16 @@ const projects=[
         demoUrl: "https://kaden175ck.github.io/Countries-Explorer/",
         githubUrl:"https://github.com/kaden175ck/Countries-Explorer",
     },
+
+    {
+        id:5,
+        title:"Inventory Management System",
+        description: "A full-stack inventory management dashboard featuring stock alerts, search, filtering, and data visualization charts.",
+        image:"/projects/inventory.png",
+        tags: ["Typescript", "Next.js 15", "Tailwind CSS", "Prisma", "PostgreSQL", "Stack Auth"],
+        demoUrl: "https://kaden175ck.github.io/inventory-management-system/",
+        githubUrl:"https://github.com/kaden175ck/inventory-management-system",
+    },
 ]
 
 export const ProjectsSection = () => {
