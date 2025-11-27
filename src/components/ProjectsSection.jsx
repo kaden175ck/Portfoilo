@@ -26,7 +26,7 @@ const projects=[
         description: "Serverless AI-powered Resume Analyzer for automated job matching. Think of it as your personal job searching assistant.",
         image:"/projects/resumeproject.png",
         tags: ["Typescript","Tailwind CSS","React Router V7","Puter.js","Zustand"],
-        demoUrl: "https://kaden175ck.github.io/Resume-Analyzer/",
+        demoUrl: "https://resume-analyzer-37-fce13.puter.site",
         githubUrl:"https://github.com/kaden175ck/Resume-Analyzer",
     },
 
