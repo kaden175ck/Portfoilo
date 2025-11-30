@@ -17,14 +17,13 @@ export const AboutSection =()=>{
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     
                     <div className="space-y-6">
-                        <h3 className="text-2xl font-semibold">Passionate Web Dev & Tech Creator</h3>
+                        <h3 className="text-2xl font-semibold">Passionate GPT User</h3>
                         <p className="text-muted-foreground">
-                            I graduated from the University of Calgary with a Bachelor of Science in Computer Science, 
-                            and I focus on building responsive, accessible, and performant web applications.
+With a CS major and DS minor, I’ve touched algorithms, ML, networks, databases—basically enough fields to impress non-engineers.
                         </p>
                         <p className="text-muted-foreground">
-                            I'm passionate about creating elegant solutions to real-world problems, 
-                            and I'm constantly learning new tools and techniques to stay at the forefront of the fast-evolving web landscape.
+
+But my real day-to-day is building front-ends with React, TypeScript, and Next.js while negotiating with GPT over whose solution is actually correct.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
