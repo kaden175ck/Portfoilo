@@ -49,6 +49,16 @@ const projects=[
         tags: ["Typescript", "Next.js 15", "Tailwind CSS", "Prisma", "PostgreSQL", "Stack Auth"],
         demoUrl: "https://kaden175ck.github.io/inventory-management-system/",
         githubUrl:"https://github.com/kaden175ck/inventory-management-system",
+    },    
+    
+    {
+        id:6,
+        title:"Forum",
+        description: "A basic forum that can be extended and customized in many ways to fit your needs.",
+        image:"/projects/forum.png",
+        tags: ["Typescript", "Next.js 15", "Tailwind CSS", "MongoDB", "React Query"],
+        demoUrl: "https://forum-g9nm.vercel.app/",
+        githubUrl:"https://github.com/kaden175ck/Forum",
     },
 ]
 
