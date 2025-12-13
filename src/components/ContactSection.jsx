@@ -63,7 +63,7 @@ export const ContactSection = () => {
             </div>
 
             {/* Discord */}
-            <div className="flex items-center gap-4">
+            {/* <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                 <SiDiscord className="h-6 w-6 text-primary" />
               </div>
@@ -77,7 +77,7 @@ export const ContactSection = () => {
                   Join My Discord
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
