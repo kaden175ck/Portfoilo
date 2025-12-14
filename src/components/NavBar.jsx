@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { cn } from "../lib/utils"
 import { Menu, X } from "lucide-react"
+import { ThemeToggle } from "./ThemeToggle"
 
 
 // create a list of different links we gonna have
@@ -36,7 +37,7 @@ export const NavBar = ()=>{
         <nav className={cn("fixed w-full z-40 transition-all duration-300", 
         isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5")}>
 
-            <div className="container flex items-center justify-between">
+            <div className="container flex items-center justify-between gap-4">
                 <a className="text-xl font-bold text-primary flex items-center"
                     href="#hero">
                     <span className="relative z-10">
@@ -55,11 +56,12 @@ export const NavBar = ()=>{
                     </div>
 
 
-                {/* mobile nav*/} 
-
-                <button onClick={()=>setIsMenuOpen((prev)=>!prev)} className="md:hidden p-2 text-foreground z-50" aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}>
-                    {isMenuOpen ? <X size={24}/> : <Menu size={24} />}
-                </button>
+                <div className="flex items-center gap-3">
+                    <ThemeToggle />
+                    <button onClick={()=>setIsMenuOpen((prev)=>!prev)} className="md:hidden p-2 text-foreground z-50" aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}>
+                        {isMenuOpen ? <X size={24}/> : <Menu size={24} />}
+                    </button>
+                </div>
 
                 <div className={cn(
                     "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center",
@@ -78,6 +80,7 @@ export const NavBar = ()=>{
                             </a>
                         ))}
                     </div>
+                    <ThemeToggle className="mt-10 md:hidden" />
                 </div>
 
             </div>
