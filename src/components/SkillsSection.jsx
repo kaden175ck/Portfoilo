@@ -1,28 +1,45 @@
 
 import { useState } from "react"
 import { cn } from "../lib/utils"
+import {
+  SiHtml5,
+  SiJavascript,
+  SiReact,
+  SiTypescript,
+  SiTailwindcss,
+  SiNextdotjs,
+  SiSass,
+  SiNodedotjs,
+  SiMysql,
+  SiMongodb,
+  SiGit,
+  SiDocker,
+  SiFigma,
+  SiVite
+} from "react-icons/si"
+import { Code2 } from "lucide-react"
 
 const skills = [
   // Frontend
-  { name: "HTML/CSS", level: 90, category: "frontend" },
-  { name: "JavaScript", level: 90, category: "frontend" },
-  { name: "React", level: 90, category: "frontend" },
-  { name: "TypeScript", level: 90, category: "frontend" },
-  { name: "Tailwind CSS", level: 90, category: "frontend" },
-  { name: "Next.js", level: 90, category: "frontend" },
-  { name: "SCSS", level: 90, category: "frontend" },
+  { name: "HTML/CSS", category: "frontend", icon: SiHtml5, color: "#E34F26" },
+  { name: "JavaScript", category: "frontend", icon: SiJavascript, color: "#F7DF1E" },
+  { name: "React", category: "frontend", icon: SiReact, color: "#61DAFB" },
+  { name: "TypeScript", category: "frontend", icon: SiTypescript, color: "#3178C6" },
+  { name: "Tailwind CSS", category: "frontend", icon: SiTailwindcss, color: "#06B6D4" },
+  { name: "Next.js", category: "frontend", icon: SiNextdotjs, color: "#000000" },
+  { name: "SCSS", category: "frontend", icon: SiSass, color: "#CC6699" },
 
   // Backend
-  { name: "Node.js", level: 80, category: "backend" },
-  { name: "SQL", level: 80, category: "backend" },
-  { name: "MongoDB", level: 80, category: "backend" },
+  { name: "Node.js", category: "backend", icon: SiNodedotjs, color: "#339933" },
+  { name: "SQL", category: "backend", icon: SiMysql, color: "#4479A1" },
+  { name: "MongoDB", category: "backend", icon: SiMongodb, color: "#47A248" },
 
   // Tools
-  { name: "Git", level: 90, category: "tools" },
-  { name: "Docker", level: 90, category: "tools" },
-  { name: "Figma", level: 90, category: "tools" },
-  { name: "VS Code", level: 90, category: "tools" },
-  { name: "Webpack/Vite", level: 80, category: "tools" },
+  { name: "Git", category: "tools", icon: SiGit, color: "#F05032" },
+  { name: "Docker", category: "tools", icon: SiDocker, color: "#2496ED" },
+  { name: "Figma", category: "tools", icon: SiFigma, color: "#F24E1E" },
+  { name: "VS Code", category: "tools", icon: Code2, color: "#007ACC" },
+  { name: "Webpack/Vite", category: "tools", icon: SiVite, color: "#646CFF" },
 ]
 
 
@@ -38,7 +55,7 @@ export const SkillsSection = ()=>{
         <section id="skills" className="py-24 px-4 relative bg-secondary/30">
             <div className="container mx-auto max-w-5xl">
                 <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-                    My<span className="text-primary"> Skills</span>
+                    Tech<span className="text-primary"> Stack</span>
                 </h2>
 
                 <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -55,23 +72,31 @@ export const SkillsSection = ()=>{
                     ))}
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {filterSkills.map((skill, key)=>(
-                        <div key={key} className="bg-card p-6 rounded-lg shadow-xs card-hover">
-                            <div className="text-left mb-4">
-                                <h3 className="font-semibold text-lg">{skill.name}</h3>
-                            </div>
-                            <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
-                                <div className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out]"
-                                style={{width: skill.level + "%"}}
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                    {filterSkills.map((skill, key)=>{
+                        const Icon = skill.icon
+                        return (
+                            <div
+                                key={key}
+                                className="group relative bg-card p-5 rounded-xl shadow-sm border border-border hover:shadow-lg hover:border-primary/50 hover:-translate-y-1 transition-all duration-300 cursor-default overflow-hidden"
+                            >
+                                <div
+                                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                    style={{
+                                        background: `linear-gradient(to bottom right, ${skill.color}10, transparent)`
+                                    }}
                                 />
+                                <div className="relative flex flex-col items-center justify-center gap-3">
+                                    <div className="p-3 rounded-lg bg-secondary/30 group-hover:scale-110 transition-all duration-300">
+                                        <Icon className="w-7 h-7" style={{ color: skill.color }} />
+                                    </div>
+                                    <span className="font-medium text-sm text-center text-foreground transition-colors duration-300">
+                                        {skill.name}
+                                    </span>
+                                </div>
                             </div>
-
-                            <div className="text-right mt-1">
-                                <span className="text-sm text-muted-foreground">{skill.level}%</span>
-                            </div>
-                        </div>
-                    ))}
+                        )
+                    })}
                 </div>
             </div>
         </section>
