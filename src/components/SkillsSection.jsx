@@ -12,6 +12,7 @@ import {
   SiNodedotjs,
   SiMysql,
   SiMongodb,
+  SiGo,
   SiGit,
   SiDocker,
   SiFigma,
@@ -33,6 +34,7 @@ const skills = [
   { name: "Node.js", category: "backend", icon: SiNodedotjs, color: "#339933" },
   { name: "SQL", category: "backend", icon: SiMysql, color: "#4479A1" },
   { name: "MongoDB", category: "backend", icon: SiMongodb, color: "#47A248" },
+  { name: "Go", category: "backend", icon: SiGo, color: "#00ADD8" },
 
   // Tools
   { name: "Git", category: "tools", icon: SiGit, color: "#F05032" },
